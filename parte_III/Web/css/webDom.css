@@ -1,0 +1,154 @@
+li {
+ font-size:1.5rem;
+}
+
+h1 {
+	font-family: "Courier New";
+	color:gray;
+}
+
+.miContainer {
+	width:100%;
+	left:0px;
+	margin-left:0px;
+	margin-right:0px;
+}
+.menu {
+	padding-left:0px;
+	padding-right:0px;
+	height:auto;
+	margin-top:70px;
+}
+footer {
+	background:black;
+	color:white;
+	position:fixed;
+    left:0px;
+    bottom:0px;
+	width:100%;
+}
+
+body {
+	background:rgba(245,245,245,0.3);
+	overflow-x:hidden;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.tituloDash {
+	font-family: "Courier New";
+	text-align:left;
+	font-size:2.3rem;
+}
+
+.sectionBarraNavegacional {
+	font-family:impact;
+	background:white;
+	font-size:5rem;
+	height:auto;
+	color:black;
+	position:fixed;
+	width:100%;
+	z-index:100;
+	border-bottom: 1px solid rgba(125,125,125,0.3);
+	
+}
+
+#logo {
+	padding:5px;
+	width:70px;
+	height:70px;
+}
+
+.fantasma {
+	height:35px;
+}
+
+.item-click {
+	cursor:pointer;
+}
+
+
+/*Contenidos*/
+
+.contenido {
+	color:#000;
+	font-size:1.7rem;
+	margin-right:0px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+#cocina {
+	margin-top:90px;
+	display:block;
+}
+
+#dormitorio1 {
+	margin-top:90px;
+	display:none;
+}
+
+#dormitorio2 {
+	margin-top:90px;
+	display:none;
+}
+
+#salon {
+	margin-top:90px;
+	display:none;
+}
+
+/*Fin contenidoss*/
+
+/*@media xss*/
+@media (max-width:400px) {
+	.miImg {
+		display:none;
+	}
+	
+	.tituloDash {
+		font-size:1.5rem;
+	}
+}
+/*@medias xs*/
+@media (max-width:767px) {
+	#menu {
+		display:none;
+		position:fixed;
+		z-index:50;
+	}
+	
+	#nombreEmpresa {
+		font-size:2rem;
+	}
+	
+	#logo {
+		width:50px;
+		height:50px;
+	}
+}
+/**/
+
+/*Fondos*/
+.fo-dash {
+	background:rgba(0,0,0,0.0);
+	border: 0px solid rgba(0,0,0,0.0);
+}
+
+.fo-dash .panel-header {
+	background-color:rgba(180,191,181,0.5);
+	border-bottom: 1px solid rgba(180,190,181,0.8);
+}
+
+.fo-dash .fo-desactivado {
+	color:#000;
+	background-color:rgba(215,215,215,0.5);
+	font-size:1.7rem;
+}
+
+.fo-dash .fo-activado {
+	color:#fff;
+	background-color:rgba(0,85,255,0.4);
+	font-size:1.7rem;
+}

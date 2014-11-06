@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="animate.css/animate.min.css">
+		<link rel="stylesheet" href="css/bootstrap-switch.css">
+		<link rel="stylesheet" href="css/webDom.css">
+		
+        <script src="bootstrap/js/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-switch.js"></script>
+		<script src="js/navegacion.js"></script>
+	</head>
+    <body onLoad="inicializar();">
+		<section class="sectionBarraNavegacional">
+			<div class="container">
+				<div class="row">
+					<div class="visible-xs col-xs-2">
+						<button onclick="expandirRegocerMenu();" class="btn btn-default"><span class="glyphicon glyphicon-align-justify"></span></button>
+					</div>
+					<div class="col-xs-7 col-sm-6 col-md-6 animated bounce">
+						<img style="width:40px; height:40px;" src="img/nuevologoAnden.png"></img>
+						<a style="text-decoration:none;" id="nombreEmpresa">Domo Anden</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!--section>
+			<div class="container">
+				<div class="row fantasma"></div>
+			</div>
+		</section-->
+		
+		<!-- webDom -->
+		<section id="webDom">
+			<div class="container miContainer">
+				<div class="row">
+					<div id="menu" class="col-xs-8 col-sm-2 col-md-2 animated fadeInLeft menu">
+						<ul id="menuLateral" class="list-group">
+						  <li onclick="cambiarTab(document.getElementById('cocina'));" class="list-group-item item-click">
+							<span id="cocinaBadge" class="badge">4</span>
+							Cocina
+						  </li>
+						  <li onclick="cambiarTab(document.getElementById('dormitorio1'));" class="list-group-item item-click">
+							<span id="dormitorio1Badge" class="badge">3</span>
+							Dormitorio1
+						  </li>
+						  <li onclick="cambiarTab(document.getElementById('dormitorio2'));" class="list-group-item item-click">
+							<span id="dormitorio2Badge" class="badge">3</span>
+							Dormitorio2
+						  </li>
+						  <li onclick="cambiarTab(document.getElementById('salon'));" class="list-group-item item-click">
+							<span id="salonBadge" class="badge">3</span>
+							Salon
+						  </li>
+						</ul>
+					</div>
+					
+				<!-- navegación -->
+
+					<!-- Cocina -->
+					<div id="cocina" class="col-xs-12 col-sm-10 col-md-10 contenido animated fadeInRight">
+						<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-12 col-md-offset-0 text-left"><h1>Cocina</h1></div>
+						<div class="col-xs-12 col-sm-12 col-md-12 fantasma"></div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="hornoCocina" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button  id="hornoCocina-" name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="hornoCocinaPanel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Horno</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="iluminacionCocina" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="iluminacionCocina-"name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="iluminacionCocinaPanel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Iluminación</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="neveraCocina" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="neveraCocina-"name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="neveraCocinaPanel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12 col-md-12"><p class="tituloDash">Nevera</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="vitroceramicaCocina" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="vitroceramicaCocina-" name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="vitroceramicaCocinaPanel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Vitrocerámica</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+									
+					</div> <!--- Fin de cocina -->
+					
+					<!-- Dormitorio1 -->
+					<div id="dormitorio1" class="col-xs-12 col-sm-10 col-md-10 contenido animated fadeInRight">
+						<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-12 col-md-offset-0 text-left"><h1>Dormitorio 1</h1></div>
+						<div class="col-xs-12 col-sm-12 col-md-12 fantasma"></div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="televisionDormitorio1" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="televisionDormitorio1-" name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="televisionDormitorio1Panel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Televisión</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="iluminacionDormitorio1" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="iluminacionDormitorio1-" name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="iluminacionDormitorio1Panel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Iluminación</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="ordenadorDormitorio1" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="ordenadorDormitorio1-" name="my-button" type="button" class="btn btn-info">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="ordenadorDormitorio1Panel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12 col-md-12"><p class="tituloDash">Ordenador</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="calefaccionDormitorio1" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="calefaccionDormitorio1-" name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="calefaccionDormitorio1Panel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Calefacción</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+									
+					</div> <!--- Fin de dormitorio1 -->
+					
+					<!-- Dormitorio2 -->
+					<div id="dormitorio2" class="col-xs-12 col-sm-10 col-md-10 contenido animated fadeInRight">
+						<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-12 col-md-offset-0 text-left"><h1>Dormitorio 2</h1></div>
+						<div class="col-xs-12 col-sm-12 col-md-12 fantasma"></div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="televisionDormitorio2" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="televisionDormitorio2-"name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="televisionDormitorio2Panel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Televisión</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="iluminacionDormitorio2" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="iluminacionDormitorio2-" name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="iluminacionDormitorio2Panel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Iluminación</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="ordenadorDormitorio2" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="ordenadorDormitorio2-" name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="ordenadorDormitorio2Panel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12 col-md-12"><p class="tituloDash">Ordenador</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-3 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="calefaccionDormitorio2" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="calefaccionDormitorio2-"name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="calefaccionDormitorio2Panel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Calefacción</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+									
+					</div> <!--- Fin de dormitorio2 -->
+					
+					<!-- Salon -->
+					<div id="salon" class="col-xs-12 col-sm-10 col-md-10 contenido animated fadeInRight">
+						<div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-12 col-md-offset-0 text-left"><h1>Salon</h1></div>
+						<div class="col-xs-12 col-sm-12 col-md-12 fantasma"></div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-4 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="televisionSalon" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="televisionSalon-"name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="televisionSalonPanel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Televisión</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-4 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="iluminacionSalon" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="iluminacionSalon-"name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="iluminacionSalonPanel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-2 col-sm-12 col-md-12"><p class="tituloDash">Iluminación</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-4 col-lg-offset-0">
+							<div class="panel fo-dash">
+								<div class="panel-header">
+									<div class="row">
+										<div class="col-md-12">
+											<input id="calefaccionSalon" name="my-checkbox" type="checkbox" checked data-on-text="Yes">
+											<button id="calefaccionSalon-"name="my-button" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+											  Info
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="calefaccionSalonPanel" class="panel-body fo-desactivado">
+									<div class="container">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12 col-md-12"><p class="tituloDash">Calefacción</p></div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+									
+					</div> <!--- Fin de salon -->
+					
+				</div>
+			</div>			
+		</section>
+		
+	</body>
+</html>
